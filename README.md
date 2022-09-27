@@ -1,5 +1,5 @@
 git clone https://github.com/kingseaa/petshop.git
 
-npm install
-npm start 
+1. npm install
+2. npm start 
 localhost:6969 hoặc localhost:8080
