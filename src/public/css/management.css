@@ -1,16 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@300;400;500&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  font-family: "Roboto Mono", monospace;
-}
-
 table,
 td,
 th {
@@ -45,4 +32,20 @@ td {
 
 .management-table td i {
   cursor: pointer;
+}
+
+.management .management-heading {
+  background-color: #bdbdbd;
+}
+
+.management .management-content:hover {
+  background-color: #27e06e;
+  transition: 0.1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.management .management-content > td > img {
+  width: 45px;
+  height: 30px;
+  object-fit: cover;
+  margin: 6px 0;
 }

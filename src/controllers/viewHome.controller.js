@@ -1,11 +1,11 @@
 import pool from "../configs/connectDB";
 
-let getHome = (req, res) => {
-  return res.render("Hello World");
+let addProduct = (req, res) => {
+  return res.render("addproduct");
 };
 
 const managementproducts = (req, res) => {
   return res.render("managementproducts");
 };
 
-module.exports = { getHome, managementproducts };
+module.exports = { addProduct, managementproducts };
