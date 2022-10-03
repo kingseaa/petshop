@@ -7,12 +7,13 @@ require("dotenv").config();
 
 const app = express();
 
-initWebroute(app);
 configViewEngine(app);
+initWebroute(app);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+
+
 app.listen(PORT, () => {
   console.log(`App listening on port http://localhost:${PORT}`);
 });
