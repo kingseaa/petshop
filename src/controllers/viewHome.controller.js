@@ -8,4 +8,8 @@ const managementproducts = (req, res) => {
   return res.render("managementproducts");
 };
 
-module.exports = { addProduct, managementproducts };
+const invoiceManagement = (req, res) => {
+  return res.render("invoicemanagement");
+};
+
+module.exports = { addProduct, managementproducts, invoiceManagement };
