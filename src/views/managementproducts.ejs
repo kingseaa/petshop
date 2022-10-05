@@ -1,63 +1,59 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="/css/management.css">
-</head>
-<body>
-  <%- include('include/_header', {name: 'Admin'}) %>
-<main class="management">
-  <div class="management-table">
-    <table>
-      <tr>
-        <th>IDSP</th>
-        <th>Tên sản phẩm</th>
-        <th>Số lượng</th>
-        <th>Giá</th>
-        <th>Đã bán</th>
-        <th>Sửa</th>
-        <th>Xóa</th>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Maria Anders</td>
-        <td>30</td>
-        <td>696969</td>
-        <td>69</td>
-        <td><i class="fa-solid fa-pen"></i></td>
-        <td><i class="fa-solid fa-trash"></i></td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Maria Anders</td>
-        <td>30</td>
-        <td>696969</td>
-        <td>69</td>
-        <td><i class="fa-solid fa-pen"></i></td>
-        <td><i class="fa-solid fa-trash"></i></td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Maria Anders</td>
-        <td>30</td>
-        <td>696969</td>
-        <td>69</td>
-        <td><i class="fa-solid fa-pen"></i></td>
-        <td><i class="fa-solid fa-trash"></i></td>
-      </tr>
-    </table>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/management.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <%- include('include/_header', {name: 'Admin', header: 'Quản lí sản phẩm'})
+    %>
+    <main class="management">
+      <div class="management-table">
+        <table>
+          <tr>
+            <th>IDSP</th>
+            <th>Tên sản phẩm</th>
+            <th>Số lượng</th>
+            <th>Giá</th>
+            <th>Đã bán</th>
+            <th>Sửa</th>
+            <th>Xóa</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Maria Anders</td>
+            <td>30</td>
+            <td>696969</td>
+            <td>69</td>
+            <td><i class="fa-solid fa-pen"></i></td>
+            <td><i class="fa-solid fa-trash"></i></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Maria Anders</td>
+            <td>30</td>
+            <td>696969</td>
+            <td>69</td>
+            <td><i class="fa-solid fa-pen"></i></td>
+            <td><i class="fa-solid fa-trash"></i></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Maria Anders</td>
+            <td>30</td>
+            <td>696969</td>
+            <td>69</td>
+            <td><i class="fa-solid fa-pen"></i></td>
+            <td><i class="fa-solid fa-trash"></i></td>
+          </tr>
+        </table>
+      </div>
 
-  <%- include('include/_dashboard') %>
-  
-</main>
-
-</body>
+      <%- include('include/_dashboard') %>
+    </main>
+  </body>
 </html>
-
