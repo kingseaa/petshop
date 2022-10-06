@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/management.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <%- include('include/_header', {name: 'Admin', header: 'Quản lí hóa đơn'})
+    %>
+
+    <main class="management">
+      <div class="management-table">
+        <table>
+          <tr class="management-header">
+            <th>STT</th>
+            <th>Mãu</th>
+            <th>Mã khách hàng</th>
+            <th>Tên khách hàng</th>
+            <th>Ngày in</th>
+            <th>Tổng tiền</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>01PET00</td>
+            <td>DT000001</td>
+            <td>Đại Thành</td>
+            <td>10/2/2022</td>
+            <td>25.000.000đ</td>
+          </tr>
+        </table>
+      </div>
+
+      <%- include('include/_dashboard') %>
+    </main>
+  </body>
+</html>

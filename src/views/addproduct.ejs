@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/addproduct.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <%- include('include/_header', {name: 'Admin', header: 'Thêm sản phẩm'}) %>
+    <main class="management">
+      <div class="form">
+        <form action="">
+          <h3 class="form-heading">Thêm sản phẩm:</h3>
+          <div class="form-content">
+            <div class="form-content__list">
+              <h3 class="form-content__child">Mã sản phẩm:</h3>
+              <input type="text" class="form-content__field" name="" />
+            </div>
+            <div class="form-content__list">
+              <h3 class="form-content__child">Tên sản phẩm:</h3>
+              <input type="text" class="form-content__field" name="" />
+            </div>
+            <div class="form-content__list">
+              <h3 class="form-content__child">Mã danh mục:</h3>
+              <input type="text" class="form-content__field" name="" />
+            </div>
+            <div class="form-content__list">
+              <h3 class="form-content__child">Đơn giá:</h3>
+              <input type="text" class="form-content__field" name="" />
+            </div>
+            <div class="form-content__list">
+              <h3 class="form-content__child">Mô tả sản phẩm:</h3>
+              <textarea name="" id="" cols="80" rows="5"></textarea>
+            </div>
+
+            <div class="form-content__img">
+              <h3 class="form-content__child">Ảnh sản phẩm:</h3>
+              <label for="form-file" class="form-select">Chọn tệp</label>
+              <input
+                type="file"
+                id="form-file"
+                class="form-content__field"
+                name=""
+                placeholder="Thêm tệp"
+                style="display: none"
+              />
+              <div class="form-icon">
+                <i class="fa-solid fa-image"></i>
+              </div>
+            </div>
+
+            <div class="form-content__list">
+              <h3 class="form-content__child">Số lượng sản phẩm:</h3>
+              <input type="text" class="form-content__field" name="" />
+            </div>
+
+            <div class="form-content__list">
+              <h3 class="form-content__child">Loại sản phẩm:</h3>
+              <input type="text" class="form-content__field" name="" />
+            </div>
+          </div>
+        </form>
+      </div>
+      <%- include('include/_dashboard') %>
+    </main>
+  </body>
+</html>

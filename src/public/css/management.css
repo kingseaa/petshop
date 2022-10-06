@@ -1,0 +1,39 @@
+table,
+td,
+th {
+  border: 1px solid;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  font-weight: 600;
+  padding: 6px;
+}
+
+td {
+  text-align: center;
+  padding: 4px;
+  font-size: 16px;
+}
+
+.management {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.management .management-table {
+  width: 70%;
+}
+
+.management-table td i {
+  cursor: pointer;
+}
+
+.management-header {
+  background-color: rgba(47, 136, 255, 0.32);
+}
