@@ -6,6 +6,7 @@ const initWebroute = (app) => {
   router.get("/v1/management", homeController.managementproducts);
   router.get("/v1/addproduct", homeController.addProduct);
   router.get("/v1/invoice", homeController.invoiceManagement);
+  router.get("/v1/login", homeController.login);
 
   return app.use("/", router);
 };
