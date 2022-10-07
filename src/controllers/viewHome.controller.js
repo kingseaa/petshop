@@ -12,4 +12,10 @@ const invoiceManagement = (req, res) => {
   return res.render("invoicemanagement");
 };
 
-module.exports = { addProduct, managementproducts, invoiceManagement };
+
+const login = (req, res) => {
+  return res.render("login");
+};
+
+module.exports = { addProduct, managementproducts, invoiceManagement,login
+ };

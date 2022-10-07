@@ -1,0 +1,151 @@
+
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #6DFF73;
+        flex-direction: column;
+    }
+
+    .login-header {
+        color: white;
+        font-size: 50px;
+        margin-bottom: 20px;
+        width: 100%;
+        text-align: center;
+    }
+    .container{
+        position: relative;
+        max-width: 430px;
+        width: 100%;
+        background: #fff;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+    }
+    .container .form{
+        padding: 30px;
+    }
+    .container .form .title{
+        position: relative;
+        font-size: 27px;
+        font-weight: 600;
+        color: #23F92B;
+        margin-left: 100px;
+       
+    }
+    .form .title::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 30px;
+        /* background-color: #4070f4; */
+        border-radius: 20px;
+    }
+    .form .input-field{
+        background-color: red;
+        position: relative;
+        height: 50px;
+        width: 100%;
+        margin-top: 30px;
+        
+
+    }
+    .input-field input{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        padding: 0 35px;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        border-bottom: 2px solid greenyellow;
+        border-top: 2px solid transparent;
+    }
+    .input-field i{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        color: #999;
+        font-size: 23px;
+    }
+    .form .checkbox-text{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    .checkbok-text .checkbok-content{
+        display: flex;
+        align-items: center;
+    }
+    .checkbok-content input{
+        margin: 0 8px -2px 4px;
+        accent-color: #4070f4;
+    }
+    .form .text{
+        color: #333;
+        font-size: 14pxS;
+    }
+    .form a{
+        color:  #23F92B;
+        text-decoration: none;
+        
+    }
+    .form a:hover{
+        text-decoration: underline;
+    }
+    .checkbox-content{
+        font-weight: bold;
+    }
+    .form .button input{
+        color: #fff;
+        letter-spacing: 1px;
+        background-color: #23F92B;
+        border: none;
+    }
+    .circle{
+        background-color: #D9D9D9;
+        display: flex;
+        justify-content: center;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: block;
+        text-align: center;
+        line-height: 50px;
+        margin-left: 150px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .button-login .signup-facebook{
+        background-color: #3B62A3;
+        color: #fff;
+        border: none;
+        width: 164px;
+        height: 32px;
+        
+    }
+    .button-login .signup-google{
+        background-color: #E64839;
+        color: #fff;
+        border: none;
+        width: 164px;
+        height: 32px;
+        margin-left: 13px;
+        display: inline;
+    }
+    
+    .login-signup{
+        margin-top: 15px;
+        margin-left: 50px;
+    }
+
