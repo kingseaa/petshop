@@ -2,6 +2,7 @@ table,
 td,
 th {
   border: 1px solid;
+ 
 }
 
 table {
@@ -12,6 +13,7 @@ table {
 th {
   font-weight: 600;
   padding: 6px;
+  
 }
 
 td {
@@ -31,14 +33,15 @@ td {
 }
 
 .management-table td i {
+  
   cursor: pointer;
   color: rgba(0, 0, 255, 0.822);
-
 }
 
 .management-header {
   background-color: rgba(47, 136, 255, 0.32);
 }
+
 .manage-users-header-table{
   background-color:rgb(89, 154, 207);
 }
