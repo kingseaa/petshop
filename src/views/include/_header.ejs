@@ -11,12 +11,24 @@
 <header class="header">
   <div class="heading">
     <div class="heading-left">
-      <i class="fa-solid fa-house heading-icon"></i>
-      <h3 class="heading-text">Trang chủ Admin</h3>
+      <a href="/v1/management">
+          <i class="fa-solid fa-house heading-icon"></i>
+        </a>
+        <h3 class="heading-text">Trang chủ Admin</h3>
     </div>
     <div class="heading-center">
       <i class="fa-solid fa-clock heading-icon"></i>
-      <h3 class="heading-text">Friday, 2/10/2022 - 20:00</h3>
+      
+      <div class="heading-text" id="current-time"></div>
+<script>
+    var curDate = new Date();
+    var curDay = curDate.getDate();
+    var curMonth = curDate.getMonth() + 1;
+    var curYear = curDate.getFullYear();
+    document.getElementById('current-time').innerHTML = curDay + "/" + curMonth + "/" + curYear;
+
+    
+</script>
     </div>
     <div class="heading-search">
       <input type="text" class="search" placeholder="Nhập từ khóa tìm kiếm" />
