@@ -20,5 +20,9 @@ const login = (req, res) => {
   return res.render("login");
 };
 
-module.exports = { addProduct, managementproducts, invoiceManagement,login,managementUsers
+const register = (req, res) => {
+  return res.render("register");
+};
+
+module.exports = { addProduct, managementproducts, invoiceManagement,login,managementUsers,register
  };

@@ -8,6 +8,7 @@ const initWebroute = (app) => {
   router.get("/v1/addproduct", homeController.addProduct);
   router.get("/v1/invoice", homeController.invoiceManagement);
   router.get("/v1/login", homeController.login);
+  router.get("/v1/register", homeController.register);
 
   return app.use("/", router);
 };
