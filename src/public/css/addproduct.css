@@ -72,3 +72,13 @@
 .form-icon i {
   font-size: 30px;
 }
+
+.btn-add__product{
+  background-color: #54ef54;
+  padding: 10px 20px ;
+  border: none;
+  color: white;
+  margin-left: 650px;
+  margin-top: 50px;
+  font-weight: 600;
+}

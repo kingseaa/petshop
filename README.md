@@ -1,8 +1,8 @@
 git clone https://github.com/kingseaa/petshop.git
 
 npm start 
-localhost:6969 hoặc localhost:8080  <br/>
-==> Để đẩy code lên repo
+localhost:6969 hoặc localhost:8080<br/>
+ Để đẩy code lên repo
 1. git branch 
 2. nếu branch: * main => git checkout develop
 3. git status: để xem các file thay đổi

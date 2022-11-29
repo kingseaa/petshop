@@ -10,9 +10,3 @@ body {
   font-family: "Roboto", sans-serif;
   font-family: "Roboto Mono", monospace;
 }
-
-textarea {
-  outline: none;
-  border: 1px solid #ddd;
-  padding: 10px;
-}

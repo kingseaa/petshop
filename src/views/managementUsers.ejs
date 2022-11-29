@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/managementUsers.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <%- include('include/_header', {name: 'Admin', header: 'Quản lí người dùng'})
+    %>
+    <main class="management">
+      <div class="management-table">
+        <table>
+          <tr class="manage-users-header-table">
+            <th>ID</th>
+            <th>Tên người dùng</th>
+            <th>userName</th>
+            <th>email</th>
+            <th>SĐT</th>
+            <th>cập nhật</th>
+            <th>Xóa</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Maria Anders</td>
+            <td>aders</td>
+            <td>aders@gmail.com</td>
+            <td>6965661684</td>
+            <td><i class="fa-solid fa-pen"></i></td>
+            <td><i class="fa-solid fa-trash"></i></td>
+          </tr>
+        </table>
+      </div>
+
+      <%- include('include/_dashboard') %>
+    </main>
+  </body>
+</html>
