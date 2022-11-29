@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Ứng dụng quản lý bán thú cưng</title>
+
     <link rel="stylesheet" href="/css/management.css" />
     <link rel="stylesheet" href="/css/style.css" />
   </head>
@@ -16,6 +17,7 @@
         <table>
           <tr class="manage-users-header-table">
             <th>IDSP</th>
+            <th>Hình ảnh</th>
             <th>Tên sản phẩm</th>
             <th>Số lượng</th>
             <th>Giá</th>
@@ -23,33 +25,21 @@
             <th>Sửa</th>
             <th>Xóa</th>
           </tr>
-          <tr>
-            <td>1</td>
-            <td>Maria Anders</td>
-            <td>30</td>
-            <td>696969</td>
-            <td>69</td>
+          <% data.forEach(function(item,index) { %>
+            <tr>
+              <td scope="row"><%= index == 0 ? 1 : index+1 %></td>
+              <td>
+                <img class="img-product" src=<%= item.picture %> alt="">
+              </td>
+              <td><%= item.name %></td>
+            <td><%= item.amount %></td>
+            <td><%= item.price %></td>
+            <td><%= item.sold %></td>
+            
             <td><i class="fa-solid fa-pen"></i></td>
             <td><i class="fa-solid fa-trash"></i></td>
           </tr>
-          <tr>
-            <td>1</td>
-            <td>Maria Anders</td>
-            <td>30</td>
-            <td>696969</td>
-            <td>69</td>
-            <td><i class="fa-solid fa-pen"></i></td>
-            <td><i class="fa-solid fa-trash"></i></td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Maria Anders</td>
-            <td>30</td>
-            <td>696969</td>
-            <td>69</td>
-            <td><i class="fa-solid fa-pen"></i></td>
-            <td><i class="fa-solid fa-trash"></i></td>
-          </tr>
+            <% });%>
         </table>
       </div>
 

@@ -42,3 +42,8 @@ td {
 .manage-users-header-table{
   background-color:rgb(89, 154, 207);
 }
+
+.img-product{
+  width: 100px;
+  height: 100px;
+}
