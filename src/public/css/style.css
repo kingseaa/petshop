@@ -1,3 +1,18 @@
-h1 {
-  color: red;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Mono", monospace;
+}
+
+textarea {
+  outline: none;
+  border: 1px solid #ddd;
+  padding: 10px;
 }

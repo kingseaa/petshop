@@ -1,0 +1,51 @@
+table,
+td,
+th {
+  border: 1px solid;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  font-weight: 600;
+  padding: 6px;
+}
+
+td {
+  text-align: center;
+  padding: 4px;
+  font-size: 20px;
+}
+
+.management {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.management .management-table {
+  width: 70%;
+}
+
+.management-table td i {
+  cursor: pointer;
+}
+
+.management .management-heading {
+  background-color: #bdbdbd;
+}
+
+.management .management-content:hover {
+  background-color: #27e06e;
+  transition: 0.1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.management .management-content > td > img {
+  width: 45px;
+  height: 30px;
+  object-fit: cover;
+  margin: 6px 0;
+}
