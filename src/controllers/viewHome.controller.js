@@ -62,7 +62,6 @@ exports.getProductUpdate = (req, res, next) => {
 };
 
 exports.postProduct = (req, res, next) => {
-  console.log(req);
   const data = {
     name: req.body.name,
     price: req.body.price,
