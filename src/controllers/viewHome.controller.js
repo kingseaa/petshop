@@ -1,4 +1,8 @@
 const Product = require("../models/manageProducts.models");
+const Register = require("../models/users.models");
+
+exports.getLogin = (req,res) => {res.render("login.ejs")}
+exports.getRegister = (req,res) => {res.render("register.ejs")}
 
 //lay ra danh sach product
 exports.listProduct = (req, res, next) => {
@@ -74,4 +78,17 @@ exports.postProduct = (req, res, next) => {
     res.redirect("/v1/management");
   });
 };
+
+exports.postRegister = (req, res) => {
+  console.log(req.body);
+  var data = new Register();
+  data.email = req.body.email;
+  data.password = req.body.price;
+  data.accept_password = req.body.accept_password;
+
+  data.save(function (err) {
+    console.log(err);
+    res.redirect("/v1/register");
+  });
+}
 
