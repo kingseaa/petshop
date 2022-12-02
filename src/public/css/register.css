@@ -1,5 +1,4 @@
 
-
     *{
         margin: 0;
         padding: 0;
@@ -38,6 +37,7 @@
         font-weight: 600;
         color: #23F92B;
         margin-left: 100px;
+        padding-left: 20px;
        
     }
     .form .title::before{
@@ -50,7 +50,7 @@
         /* background-color: #4070f4; */
         border-radius: 20px;
     }
-    .form .input-field{
+    .form .input-field {
         position: relative;
         height: 50px;
         width: 100%;
@@ -58,6 +58,7 @@
         
 
     }
+    
     .input-field input{
         position: absolute;
         height: 100%;
@@ -110,7 +111,10 @@
         letter-spacing: 1px;
         background-color: #23F92B;
         border: none;
+        cursor: pointer;
+        
     }
+    
     .circle{
         background-color: #D9D9D9;
         display: flex;
@@ -160,3 +164,5 @@
     left: 50%;
     transform: translateX(-50px);
     }
+
+   

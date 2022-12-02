@@ -27,8 +27,7 @@ app.use("/", indexRouter);
 app.use(function (req, res, next) {
   next(createError(404));
 });
-
-mongoose.connect("mongodb://127.0.0.1:27017/petStar", {
+mongoose.connect("mongodb://localhost:27017/petStar", {
   useNewUrlParser: true,
 });
 var db = mongoose.connection;

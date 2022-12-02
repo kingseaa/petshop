@@ -37,3 +37,7 @@ module.exports.get = function (callback, limit) {
 };
 
 
+//B1: tạo thẻ form có action và method, action => router.post("/v1/register", product.postRegister), method = post
+//B2: tạo router.post("/v1/register", product.postRegister);
+//B3: tạo controllers postRegister
+//B4: gửi dữ liệu từ form tới models và lưu dữ liệu

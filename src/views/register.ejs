@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="/css/register.css">
+<link
+  href="/fontawesome-free-6.2.0-web/css/all.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+<link rel="stylesheet" href="/css/style.css">
+
+<body>
+    <h2 class="login-header">PetStar</h2>
+    <form action="/v1/register" method="POST">
+        <div class="container">
+            <div class="forms">
+                <div class="form login">
+                    <span class="title">Register</span>
+                    <form action="/v1/login">
+                        <div class="input-field">
+                            <input type="text" placeholder="Enter your email"  name="email" required>
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" placeholder="Enter your password" name="password" required>
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" placeholder="Enter your password" name="accept_password" required>
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                        <div class="input-field button">
+                            <button type="submit" class="register-button">Register now</button>
+                        </div>
+                    </form>
+                    <div class="login-signup">
+                        <span class="text">Ban da co tai khoan?
+                            <a href="/v1/login" class="text-signup-text">Dang nhap</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
