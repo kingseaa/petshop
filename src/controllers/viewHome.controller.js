@@ -31,3 +31,20 @@ exports.addProduct = (req, res, next) => {
     res.redirect("/v1/management");
   });
 };
+
+//xoa method get
+exports.getProductDelete = (req, res, next) => {
+  const ID = req.params.id;
+  Product.findById(ID, function (err, resData) {
+      console.log(" du lieu query %j", resData);
+      res.render('./delete', {data: resData});
+  }); 
+}
+// xoa voi method post
+exports.postProductDelete = (req, res, next) => {
+  console.log("chay toi xoa %j", req.params.id);
+  Product.deleteOne({ _id: req.params.id }, function (err) {
+      if(err) console.log(err);
+      res.redirect("/v1/management");
+    });
+}
