@@ -32,6 +32,7 @@ exports.addProduct = (req, res, next) => {
   });
 };
 
+
 //xoa method get
 exports.getProductDelete = (req, res, next) => {
   const ID = req.params.id;
@@ -48,3 +49,30 @@ exports.postProductDelete = (req, res, next) => {
       res.redirect("/v1/management");
     });
 }
+
+exports.getProductUpdate = (req, res, next) => {
+  const ID = req.params.id;
+  Product.findById(ID, function (err, adventure) {
+    res.render("edit", { data: adventure });
+  });
+};
+
+exports.postProduct = (req, res, next) => {
+  console.log(req);
+  const data = {
+    name: req.body.name,
+    price: req.body.price,
+    desc: req.body.desc,
+    amount: req.body.amount,
+    picture: req.body.picture,
+    sold: req.body.sold,
+    type: req.body.type,
+  };
+  Product.update({ _id: req.params.id }, data, function (err, raw) {
+    if (err) {
+      res.send(err);
+    }
+    res.redirect("/v1/management");
+  });
+};
+
