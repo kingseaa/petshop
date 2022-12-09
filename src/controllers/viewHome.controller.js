@@ -1,8 +1,12 @@
 const Product = require("../models/manageProducts.models");
 const Register = require("../models/users.models");
 
-exports.getLogin = (req,res) => {res.render("login.ejs")}
-exports.getRegister = (req,res) => {res.render("register.ejs")}
+exports.getLogin = (req, res) => {
+  res.render("login.ejs");
+};
+exports.getRegister = (req, res) => {
+  res.render("register.ejs");
+};
 
 //lay ra danh sach product
 exports.listProduct = (req, res, next) => {
@@ -19,8 +23,6 @@ exports.getProductCreate = (req, res, next) => {
 };
 
 exports.addProduct = (req, res, next) => {
-  console.log("data gui tu form nhap len %j", req.body);
-
   var data = new Product();
   data.name = req.body.name;
   data.price = req.body.price;
@@ -36,23 +38,21 @@ exports.addProduct = (req, res, next) => {
   });
 };
 
-
 //xoa method get
 exports.getProductDelete = (req, res, next) => {
   const ID = req.params.id;
   Product.findById(ID, function (err, resData) {
-      console.log(" du lieu query %j", resData);
-      res.render('./delete', {data: resData});
-  }); 
-}
+    console.log(" du lieu query %j", resData);
+    res.render("./delete", { data: resData });
+  });
+};
 // xoa voi method post
 exports.postProductDelete = (req, res, next) => {
-  console.log("chay toi xoa %j", req.params.id);
   Product.deleteOne({ _id: req.params.id }, function (err) {
-      if(err) console.log(err);
-      res.redirect("/v1/management");
-    });
-}
+    if (err) console.log(err);
+    res.redirect("/v1/management");
+  });
+};
 
 exports.getProductUpdate = (req, res, next) => {
   const ID = req.params.id;
@@ -83,12 +83,20 @@ exports.postRegister = (req, res) => {
   console.log(req.body);
   var data = new Register();
   data.email = req.body.email;
-  data.password = req.body.price;
+  data.password = req.body.password;
   data.accept_password = req.body.accept_password;
 
   data.save(function (err) {
     console.log(err);
     res.redirect("/v1/register");
   });
-}
+};
 
+exports.searchProduct = async (req, res) => {
+  console.log(req.body);
+  let data = await Product.find({
+    $or: [{ name: { $regex: req.body.search } }],
+  });
+
+  res.render("managementproducts", { data: data });
+};

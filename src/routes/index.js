@@ -19,7 +19,10 @@ router.post("/v1/management/edit/:id", product.postProduct);
 // router.get("/v1/invoice", homeController.invoiceManagement);
 // router.get("/v1/login", homeController.login);
 
-router.get('/v1/management/delete/:id', product.getProductDelete);
-router.post('/v1/management/delete/:id', product.postProductDelete);
+router.get("/v1/management/delete/:id", product.getProductDelete);
+router.post("/v1/management/delete/:id", product.postProductDelete);
+
+//search
+router.post("/v1/management/search", product.searchProduct);
 
 module.exports = router;

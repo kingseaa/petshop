@@ -3,9 +3,19 @@
     width: 500px;
     height: 100px;
     padding: 20px;
-    display: inline-block;
     margin-left: 450px;
 }
+
+.button_delete{
+    margin-top: 20px;
+    display: flex;
+    margin-right: 20px;
+    margin-left: 90px;
+}
 .button{
-    display: inline-block;
+    margin-left: 70px;
+}
+.back{
+    margin-left: 40px;
+    
 }
