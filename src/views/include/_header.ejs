@@ -30,12 +30,16 @@
     
 </script>
     </div>
+    <form action="/v1/management/search" method="post">
     <div class="heading-search">
-      <input type="text" class="search" placeholder="Nhập từ khóa tìm kiếm" />
-      <i
+      <input type="text" name="search" class="search" placeholder="Nhập từ khóa tìm kiếm" />
+      <button type="submit">
+        <i
         class="fa-solid fa-magnifying-glass heading-icon heading-icon__search"
       ></i>
+      </button>
     </div>
+    </form>
     <div class="heading-right">
       <h3 class="heading-text">Xin chào</h3>
       <i class="fa-solid fa-user heading-icon"></i>
