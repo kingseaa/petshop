@@ -93,7 +93,6 @@ exports.postRegister = (req, res) => {
 };
 
 exports.searchProduct = async (req, res) => {
-  console.log(req.body);
   let data = await Product.find({
     $or: [{ name: { $regex: req.body.search } }],
   });
