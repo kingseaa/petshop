@@ -1,13 +1,16 @@
 const Product = require("../models/manageProducts.models");
 const Register = require("../models/users.models");
 const Login = require("../models/users");
-const bcrypt = require('bcrypt');
-const User = require ("../models/users");
+const bcrypt = require("bcryptjs");
+const User = require("../models/users");
 const { render } = require("ejs");
 
-exports.getLogin = (req,res) => {
-  res.render("login.ejs")}
-exports.getRegister = (req,res) => {res.render("register.ejs")}
+exports.getLogin = (req, res) => {
+  res.render("login.ejs");
+};
+exports.getRegister = (req, res) => {
+  res.render("register.ejs");
+};
 
 //lay ra danh sach product
 exports.listProduct = (req, res, next) => {
@@ -41,23 +44,22 @@ exports.addProduct = (req, res, next) => {
   });
 };
 
-
 //xoa method get
 exports.getProductDelete = (req, res, next) => {
   const ID = req.params.id;
   Product.findById(ID, function (err, resData) {
-      console.log(" du lieu query %j", resData);
-      res.render('./delete', {data: resData});
-  }); 
-}
+    console.log(" du lieu query %j", resData);
+    res.render("./delete", { data: resData });
+  });
+};
 // xoa voi method post
 exports.postProductDelete = (req, res, next) => {
   console.log("chay toi xoa %j", req.params.id);
   Product.deleteOne({ _id: req.params.id }, function (err) {
-      if(err) console.log(err);
-      res.redirect("/v1/management");
-    });
-}
+    if (err) console.log(err);
+    res.redirect("/v1/management");
+  });
+};
 
 exports.getProductUpdate = (req, res, next) => {
   const ID = req.params.id;
@@ -97,21 +99,29 @@ exports.postRegister = (req, res) => {
   });
 };
 
-
-exports.postLogin = (req, res, next) =>{
-  var username = req.body.username
-  var password = req.body.password
+exports.postLogin = (req, res, next) => {
+  var username = req.body.username;
+  var password = req.body.password;
   Register.findOne({
     username: username,
-    password: password
+    password: password,
   })
-  .then(data=>{
-    if(data){
-      return res.redirect("/v1/management") 
-    }
-    console.log(data)
-  })
-  .catch(err=>{
-    res.status(500).json('err')
-  })
-}
+    .then((data) => {
+      if (data) {
+        return res.redirect("/v1/management");
+      }
+      console.log(data);
+    })
+    .catch((err) => {
+      res.status(500).json("err");
+    });
+};
+
+exports.searchProduct = async (req, res) => {
+  console.log(req.body);
+  let data = await Product.find({
+    $or: [{ name: { $regex: req.body.search } }],
+  });
+
+  res.render("managementproducts", { data: data });
+};
