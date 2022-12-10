@@ -1,7 +1,7 @@
 const Product = require("../models/manageProducts.models");
 const Register = require("../models/users.models");
 const Login = require("../models/users");
-const bcrypt = require('bcrypt');
+// const bcrypt = require('bcrypt');
 const User = require ("../models/users");
 const { render } = require("ejs");
 
